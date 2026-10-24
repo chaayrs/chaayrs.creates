@@ -23,6 +23,7 @@ export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
+  const isCreatorWork = slug === "beauty-skincare";
   const next = projects.find((p) => p.slug !== slug)!;
   return (
     <>
@@ -70,7 +71,10 @@ export default async function ProjectPage({ params }: Props) {
             </div>
           </dl>
         </section>
-        <section className="case-films" aria-labelledby="films-heading">
+        <section
+          className={`case-films${isCreatorWork ? " case-films--creator" : ""}`}
+          aria-labelledby="films-heading"
+        >
           <div className="films-heading">
             <div>
               <span className="eyebrow">THE FINISHED WORK</span>
@@ -80,15 +84,31 @@ export default async function ProjectPage({ params }: Props) {
             </div>
             <span className="eyebrow">PRESS PLAY TO WATCH WITH SOUND</span>
           </div>
-          <VideoGallery
-            videos={project.videos}
-            filterable={slug === "beauty-skincare"}
-          />
-          <p className="project-source-note">{project.note}</p>
+          <VideoGallery videos={project.videos} filterable={isCreatorWork} />
+          {project.note && (
+            <p className="project-source-note">{project.note}</p>
+          )}
         </section>
-        <section className="case-thinking">
+        <section
+          className={`case-thinking${isCreatorWork ? " case-thinking--creator" : ""}`}
+          data-motion-group={isCreatorWork || undefined}
+        >
           <span className="eyebrow">THE CREATIVE INTENTION</span>
-          <h2>{project.intention}</h2>
+          {isCreatorWork ? (
+            <h2 data-motion-heading aria-label={project.intention}>
+              {project.intention.match(/[^.]+\./g)?.map((line, index) => (
+                <span className="line-mask" key={line}>
+                  <span
+                    className={`motion-line${index ? " motion-step-1" : ""}`}
+                  >
+                    {line.trim()}
+                  </span>
+                </span>
+              ))}
+            </h2>
+          ) : (
+            <h2>{project.intention}</h2>
+          )}
         </section>
         <Link href={`/work/${next.slug}`} className="next-project">
           <div>

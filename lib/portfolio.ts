@@ -13,6 +13,7 @@ export type PortfolioVideo = {
   title: string;
   label: string;
   description: string;
+  credit?: string;
   type: "AI storytelling" | "On-camera" | "Product-focused";
 };
 
@@ -46,6 +47,7 @@ export const ugcVideos: PortfolioVideo[] = [
   {
     slug: "collagen-cream",
     title: "One Day’s You / Collagen Cream",
+    credit: "UGC featuring One Day’s You",
     label: "01 / CREATOR-LED STORY",
     description:
       "An on-camera skincare feature with a direct opening hook and a personal product presentation.",
@@ -54,6 +56,7 @@ export const ugcVideos: PortfolioVideo[] = [
   {
     slug: "rejuran-ampoule",
     title: "Rejuran / Turnover Ampoule",
+    credit: "UGC featuring Rejuran",
     label: "02 / PRODUCT IN FOCUS",
     description:
       "A product-focused skincare promotion with close-up packaging and product presentation.",
@@ -62,6 +65,7 @@ export const ugcVideos: PortfolioVideo[] = [
   {
     slug: "ponds-cleansers",
     title: "Pond’s / K-Beauty Cleansers",
+    credit: "UGC featuring Pond’s",
     label: "03 / SKINCARE STORY",
     description:
       "An on-camera product story introducing a selection of K-beauty cleansers.",
@@ -70,6 +74,7 @@ export const ugcVideos: PortfolioVideo[] = [
   {
     slug: "roundlab-sun-cushion",
     title: "Round Lab / Birch Juice Sun Cushion",
+    credit: "UGC featuring Round Lab",
     label: "04 / PRODUCT DISCOVERY",
     description:
       "A skincare product feature centered on the Birch Juice Sun Cushion.",
@@ -78,6 +83,7 @@ export const ugcVideos: PortfolioVideo[] = [
   {
     slug: "pdrn-serum",
     title: "One Day’s You / PDRN",
+    credit: "UGC featuring One Day’s You",
     label: "05 / RELATABLE HOOK",
     description:
       "A creator-led skincare story that opens with a relatable skin concern.",
@@ -86,6 +92,7 @@ export const ugcVideos: PortfolioVideo[] = [
   {
     slug: "rivecowe-ampoule",
     title: "Rivecowe / Ampoule",
+    credit: "UGC featuring Rivecowe",
     label: "06 / THE PRODUCT DETAILS",
     description:
       "A product-focused ampoule feature with an ingredient-led opening hook.",
@@ -130,11 +137,10 @@ export const projects = [
     overview:
       "A selection of my beauty and skincare content, bringing together on-camera product stories, relatable opening hooks, and focused product details. Each piece offers a different way to introduce a product through creator-led storytelling.",
     role: "UGC content creation and product storytelling across on-camera and product-focused formats.",
-    intention:
-      "Start with a recognizable moment or a clear product detail, then give the viewer a reason to keep watching.",
+    intention: "I don't just create the frame. I shape the thinking behind it.",
     audience: "Beauty and skincare audiences on short-form social platforms.",
     format: "Vertical creator content and product-focused video.",
-    note: "A selection of creator work featuring these products. Brand appearances do not by themselves indicate a direct paid partnership.",
+    note: null,
     videos: ugcVideos,
   },
 ] as const;

@@ -65,6 +65,7 @@ export function VideoGallery({
             </div>
             <h3>{video.title}</h3>
             <p>{video.description}</p>
+            {video.credit && <p className="video-credit">{video.credit}</p>}
           </article>
         ))}
       </div>

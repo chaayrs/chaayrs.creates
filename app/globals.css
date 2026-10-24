@@ -1531,6 +1531,14 @@ em {
   color: var(--muted);
   margin-top: 9px;
 }
+.video-card .video-credit {
+  margin-top: 12px;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blush);
+}
 .project-source-note {
   margin-top: 35px;
   font-size: 11px;
@@ -1580,6 +1588,21 @@ em {
   max-width: 950px;
   color: var(--blush);
   margin-top: 24px;
+}
+.case-films--creator {
+  padding-bottom: clamp(28px, 3.2vw, 44px);
+}
+.case-thinking--creator {
+  padding: clamp(28px, 3.4vw, 44px) 0 clamp(30px, 3.8vw, 50px);
+}
+.case-thinking--creator h2 {
+  font-size: clamp(30px, 3.6vw, 52px);
+  line-height: 1.18;
+  max-width: 1000px;
+  margin-top: 20px;
+}
+.case-thinking--creator .motion-line {
+  text-wrap: balance;
 }
 .next-project {
   display: flex;
@@ -2220,6 +2243,9 @@ em {
   }
   .case-thinking h2 {
     font-size: 32px;
+  }
+  .case-thinking--creator h2 {
+    font-size: clamp(28px, 7.6vw, 34px);
   }
   .next-project {
     margin-bottom: 35px;
