@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+.env*
+.media-source/
+.dev/
+output/
+homepage-preview.png
+.DS_Store

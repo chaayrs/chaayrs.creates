@@ -1,0 +1,56 @@
+{
+  "collagen-cream": {
+    "duration": 19,
+    "width": 720,
+    "height": 1280,
+    "bytes": 4122240
+  },
+  "pdrn-serum": {
+    "duration": 20,
+    "width": 720,
+    "height": 1280,
+    "bytes": 4168636
+  },
+  "ponds-cleansers": {
+    "duration": 29,
+    "width": 720,
+    "height": 1280,
+    "bytes": 7503412
+  },
+  "rejuran-ampoule": {
+    "duration": 11,
+    "width": 720,
+    "height": 1280,
+    "bytes": 2301888
+  },
+  "rivecowe-ampoule": {
+    "duration": 26,
+    "width": 720,
+    "height": 1280,
+    "bytes": 5888502
+  },
+  "roundlab-sun-cushion": {
+    "duration": 26,
+    "width": 720,
+    "height": 1280,
+    "bytes": 6798296
+  },
+  "tokyo-budget": {
+    "duration": 29,
+    "width": 720,
+    "height": 1280,
+    "bytes": 5882288
+  },
+  "trish-day-in-life": {
+    "duration": 30,
+    "width": 720,
+    "height": 1280,
+    "bytes": 5170088
+  },
+  "trish-introduction": {
+    "duration": 15,
+    "width": 720,
+    "height": 1280,
+    "bytes": 5295574
+  }
+}
